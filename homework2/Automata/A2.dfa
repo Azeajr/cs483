@@ -1,0 +1,15 @@
+# DFA A2
+# L(A2) = {w | w contains even number of 0s}.
+
+states: q1, q2
+
+input alphabet: 0,1
+
+start state: q1
+
+accept states: q1
+
+delta:  q1,0 -> q2
+	q1,1 -> q1
+	q2,0 -> q1
+	q2,1 -> q2

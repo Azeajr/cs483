@@ -1,0 +1,20 @@
+# NFA N1 (Sipser, Figure 1.27)
+# L(N1) = {w| w contains either 101 or 11 as a substring}
+
+states: q1, q2, q3, q4
+
+input alphabet: 0,1
+
+start state: q1
+
+accept states: q4
+
+delta:  q1,0 -> q1
+	q1,1 -> q1, q2
+	q2,0 -> q3
+	q2,  -> q3
+	q3,1 -> q4
+	q4,0 -> q4
+	q4,1 -> q4
+
+

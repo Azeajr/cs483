@@ -1,0 +1,15 @@
+# DFA A1
+# L(A1) = {w | w contains odd number of 1s}.
+
+states: q1, q2
+
+input alphabet: 0,1
+
+start state: q1
+
+accept states: q2
+
+delta:  q1,0 -> q1
+	q1,1 -> q2
+	q2,0 -> q2
+	q2,1 -> q1

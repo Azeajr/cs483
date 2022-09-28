@@ -1,0 +1,14 @@
+# DFA D2 (Figure 1.67a), eqiuvalent to regular expression a*b(a U b)*
+
+states: 1,2
+
+input alphabet: a,b
+
+start state: 1
+
+accept states: 2
+
+delta:  1,a -> 1
+	1,b -> 2
+	2,a -> 2
+	2,b -> 2

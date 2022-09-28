@@ -1,0 +1,16 @@
+states: q1,q2,q3,q4,q5,q6,q7,q8
+
+input alphabet: 0, 1
+
+start state: q1
+
+accept states: q8
+
+delta:  q1,1  -> q2
+	q2,  -> q3,q4,q7
+	q3,1 -> q5
+	q4,0 -> q6
+	q5,  -> q7
+	q6,  -> q7
+	q7,  -> q2
+	q7,0 -> q8

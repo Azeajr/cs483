@@ -1,0 +1,17 @@
+# NFA N2 (Sipser, Example 1.30, Figure 1.31)
+# L(N4) = {w|w contains a 1 in the third position from the end}
+
+states: q1,q2,q3,q4
+
+input alphabet: 0,1
+
+start state: q1
+
+accept states: q4
+
+delta:  q1,0 -> q1
+	q1,1 -> q1,q2
+	q2,0 -> q3
+	q2,1 -> q3
+	q3,0 -> q4
+	q3,1 -> q4

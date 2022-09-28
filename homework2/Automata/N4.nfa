@@ -1,0 +1,16 @@
+# NFA N4 (Sipser, Figure 1.42)
+
+states: 1,2,3
+
+input alphabet: a, b
+
+start state: 1
+
+accept states: 1
+
+delta:  1,  -> 3
+	1,b -> 2
+	2,a -> 2,3
+	2,b -> 3
+	3,a -> 1
+

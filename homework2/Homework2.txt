@@ -1,0 +1,14 @@
+Do the following, include the results in a Word or PDF file and attach it to this submission. Due on September 28.
+
+1.	Design the following finite automata (DFA denotes deterministic and NFA - nondeterministic). For each one, draw the state diagram, implement it for the FASimulator and show its output (copy of the simulator window) for two inputs - one ACCEPTED and one REJECTED.
+	* DFA1 that recognizes the language A1 = {w| w ∈ {0,1}*, w begins with a 1 and ends with a 0}. 
+	* DFA2 that recognizes the language A2 = {w| w ∈ {0,1}*, w contains at least three 1s}. 
+	* NFA1 for language A1 with three states.
+	* DFA3 converted from NFA1 using the proof of Theorem 1.39.
+	* NFA2 that recognizes the language A1 ∪ A2 (union of A1 and A2). Use the construction in the proof of Theorem 1.45.
+
+
+2.	Write a program in Java (using the Pattern class) for matching regular expressions and strings from the language they describe. The program should print the regex, the string and the result of matching them (true/false). Create the regular expressions describing the languages A1 and A2 (from Question 1) and for each one show one string that belongs to the language (matches the regex) and one that does not. Include the source code of the program in your report.
+
+
+3.	Convert the regular expression 1(1 ∪ 0)*0 to an NFA using the proof of Lemma 1.55. Show the state diagram, implement it for the FASimulator and show its output (copy of the simulator window) for two inputs - one ACCEPTED and one REJECTED. Note that this NFA recognizes the same language as DFA1, NFA1, and DFA3, but it is designed differently.  

@@ -1,0 +1,12 @@
+states: q1, q2, q3
+
+input alphabet: 0,1
+
+start state: q1
+
+accept states: q3
+
+delta:
+	q1,1 -> q2
+	q2,0 -> q2, q3
+	q2,1 -> q2

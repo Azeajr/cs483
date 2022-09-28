@@ -1,0 +1,26 @@
+# DFA D (Figure 1.43), equvalent to N4 (Figure 1.42)
+
+states: 0,1,2,3,12,13,23,123
+
+input alphabet: a, b
+
+start state: 13
+
+accept states: 1,12,13,123
+
+delta:  0,a -> 0
+	0,b -> 0
+	1,a -> 0
+	1,b -> 2
+	2,a -> 23
+	2,b -> 3
+	3,a -> 13
+	3,b -> 0
+	12,a -> 23
+	12,b -> 23
+	13,a -> 13
+	13,b -> 2
+	23,a -> 123
+	23,b -> 3
+	123,a -> 123
+	123,b -> 23
