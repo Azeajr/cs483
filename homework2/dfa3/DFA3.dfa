@@ -1,12 +1,13 @@
-states: q1, q2, q2q3, null
+states: q1, q2, q2q3, null, q3, q1q3, q1q2, q1q2q3
 
 input alphabet: 0, 1
 
 start state: q1
 
-accept states: q2q3
+accept states: q2q3, q3, q1q3, q1q2, q1q2q3
 
-delta: q1,0 -> null
+delta: 
+	q1,0 -> null
 	q1, 1 -> q2
 	q2, 0 -> q2q3
 	q2, 1 -> q2
@@ -14,3 +15,11 @@ delta: q1,0 -> null
 	q2q3, 1 -> q2
 	null, 0 -> null
 	null, 1 -> null
+	q3, 0 -> null
+	q3, 1 -> null
+	q1q3, 0 -> null
+	q1q3, 1 -> q2
+	q1q2, 0 -> q2q3
+	q1q2, 1 -> q2
+	q1q2q3, 0 -> q2q3
+	q1q2q3, 1 -> q2

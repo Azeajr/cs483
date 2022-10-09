@@ -141,6 +141,10 @@ DFA1 that recognizes the language
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -187,6 +191,10 @@ DFA2 that recognizes the language
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -229,6 +237,10 @@ NFA1 for language
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -238,14 +250,14 @@ DFA3 converred from NFA1 usig the proof of Theorem 1.39
 \begin_layout Standard
 \begin_inset Graphics
 	filename dfa3/DFA3.png
-	width 30page%
+	width 40page%
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename dfa3/dfa3.png
-	width 20page%
+	width 40page%
 
 \end_inset
 
@@ -264,6 +276,10 @@ DFA3 converred from NFA1 usig the proof of Theorem 1.39
 	filename dfa3/faSim_dfa3_rej.png
 	width 40page%
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -310,6 +326,10 @@ NFA2 that recognizes the language
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -335,6 +355,10 @@ ns and strings from the language they describe.
 	filename javaPattern/javaPatternOutput.png
 	width 80page%
 
+\end_inset
+
+
+\begin_inset Newpage pagebreak
 \end_inset
 
 
