@@ -411,14 +411,14 @@ CFG
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $S\rightarrow a|SOS|(SOS)$
+\begin_inset Formula $S\rightarrow a|SXS|(SXS)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $O\rightarrow+|-|*|/$
+\begin_inset Formula $X\rightarrow+|-|*|/$
 \end_inset
 
 
@@ -436,11 +436,39 @@ CFG
 \end_layout
 
 \begin_layout Standard
+\begin_inset Formula $S\rightarrow X1X1X1X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0X|1X|\varepsilon$
+\end_inset
+
 
 \end_layout
 
 \begin_layout Subsection*
 \begin_inset Formula $L_{3}=\{w|w∈\{0,1\}^{*},w\text{ the length of w is odd}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0X|1X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0S|1S|\varepsilon$
 \end_inset
 
 
@@ -453,11 +481,40 @@ CFG
 
 \end_layout
 
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0X0|1X1|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0X|1X|\varepsilon$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 \begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0S0|1S1|0|1|\varepsilon$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
@@ -467,7 +524,18 @@ CFG
 
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow SS|0S1|1S0|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Use the 
 \bar under
 CFG Developer
@@ -480,6 +548,231 @@ test the grammars
  Try strings that belong to the language of the grammar and strings that
  do not.
  Show the derivations of the strings that belong to the language.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle" tabularwidth="20cm">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0pt">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{gathered}L_{1}=\{w|w\in\{a,+,-,*,/,(,)\},\\
+w\text{ is an arithmetic expression in infix form}\}
+\end{gathered}
+$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{2}=\{w|w\in\{0,1\}^{*},w\text{ contains at least three 1s}\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l1.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l2.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{3}=\{w|w∈\{0,1\}^{*},w\text{ the length of w is odd}\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{4}=\{w|w\in\{0,1\}^{*},w\text{ starts and end with the same symbol}\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l3.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l4.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{contains equal numbers of 0s and 1s}\}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l5.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfg_l6.png
+	lyxscale 40
+	width 40page%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section

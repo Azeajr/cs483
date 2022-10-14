@@ -221,7 +221,7 @@ Assume
 \end_inset
 
  may be divided into three pieces, 
-\begin_inset Formula $p=xyz$
+\begin_inset Formula $s=xyz$
 \end_inset
 
 , satisfying the following conditions:
@@ -303,7 +303,7 @@ Assume
 \end_inset
 
  may be divided into three pieces, 
-\begin_inset Formula $p=xyz$
+\begin_inset Formula $s=xyz$
 \end_inset
 
 , satisfying the following conditions:
@@ -345,19 +345,43 @@ Let
 \begin_inset Formula $s=w(0\cup1\cup\varepsilon)w^{\mathcal{R}}$
 \end_inset
 
- or 
-\begin_inset Formula $w1w^{\mathcal{R}}$
-\end_inset
-
- or 
-\begin_inset Formula $ww^{\mathcal{R}}$
+somehow 
+\begin_inset Formula $s=xyz$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-case 1: y is in the first set 
+case 1: 
+\begin_inset Formula $y$
+\end_inset
+
+occurs in 
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+case 2: 
+\begin_inset Formula $y$
+\end_inset
+
+occurs in 
+\begin_inset Formula $w^{\mathcal{R}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+case 3: 
+\begin_inset Formula $y$
+\end_inset
+
+ occurs inbetween with part
 \end_layout
 
 \begin_layout Subsection*
@@ -375,6 +399,142 @@ give the CFG
  that describes it.
 \end_layout
 
+\begin_layout Subsection*
+\begin_inset Formula $L_{1}=\{w|w\in\{a,+,-,*,/,(,)\}^{*},w\text{ is a legal arithmetic expression in infix form}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow a|SXS|(SXS)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow+|-|*|/$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $L_{2}=\{w|w\in\{0,1\}^{*},w\text{ contains at least three 1s}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow X1X1X1X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0X|1X|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $L_{3}=\{w|w∈\{0,1\}^{*},w\text{ the length of w is odd}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0X|1X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0S|1S|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $L_{4}=\{w|w\in\{0,1\}^{*},w\text{ starts and end with the same symbol}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0X0|1X1|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X\rightarrow0X|1X|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow0S0|1S1|0|1|\varepsilon$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{contains equal numbers of 0s and 1s}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CFG
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S\rightarrow SS|0S1|1S0|\varepsilon$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Use the 
 \bar under
@@ -388,6 +548,149 @@ test the grammars
  Try strings that belong to the language of the grammar and strings that
  do not.
  Show the derivations of the strings that belong to the language.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{1}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l1.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{2}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l2.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{3}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l3.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{4}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l4.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{5}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l5.png
+	width 40page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $L_{6}$
+\end_inset
+
+
+\begin_inset Graphics
+	filename cfg_l6.png
+	width 40page%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
