@@ -106,7 +106,7 @@ Consider the following languages:
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{3}=\{w|w∈\{0,1\}^{*},w\text{ the length of w is odd}\}$
+\begin_inset Formula $L_{3}=\{w|w∈\{0,1\}^{*},\text{ the length of \ensuremath{w} is odd}\}$
 \end_inset
 
 
@@ -120,14 +120,14 @@ Consider the following languages:
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
+\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{ is a palindrome}\}$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{contains equal numbers of 0s and 1s}\}$
+\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{ contains equal numbers of 0s and 1s}\}$
 \end_inset
 
 
@@ -149,7 +149,7 @@ regular expressions
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{2}=10^{*}10^{*}1(0\cup1)^{*}$
+\begin_inset Formula $L_{2}=0^{*}10^{*}10^{*}1(0\cup1)^{*}$
 \end_inset
 
 
@@ -163,7 +163,7 @@ regular expressions
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{4}=0(0\cup1)^{*}0\cup1(0\cup1)^{*}1$
+\begin_inset Formula $L_{4}=(0(0\cup1)^{*}0)\cup(1(0\cup1)^{*}1)$
 \end_inset
 
 
@@ -180,7 +180,14 @@ regular expressions
 \begin_inset Formula $L_{6}$
 \end_inset
 
-is nonregular
+ is nonregular
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -260,18 +267,62 @@ Assume
 \end_inset
 
 Let 
-\begin_inset Formula $s=(a+a)$
+\begin_inset Formula $s=(^{p+1}\{a+\}^{p+1}a)^{p+1}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-case 1: y is in the first set 
+case 1: y contains the open parenthesis
+\end_layout
+
+\begin_layout Standard
+In this case 
+\begin_inset Formula $xy^{i}z$
+\end_inset
+
+ will contain more open parentheses than close parentheses.
+ Then 
+\begin_inset Formula $xy^{i}z\notin L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+case 2: y contains the close parenthesis
+\end_layout
+
+\begin_layout Standard
+In this case 
+\begin_inset Formula $|xy|>p$
+\end_inset
+
+ which fails the pumping lemma.
+\end_layout
+
+\begin_layout Standard
+case 3: y does not contain any parenthesis
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $|x|>p$
+\end_inset
+
+ which fails the pumping lemma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore L_{1}$
+\end_inset
+
+must be nonregular
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
+\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{ is a palindrome}\}$
 \end_inset
 
  
@@ -291,7 +342,7 @@ Assume
 \end_inset
 
  is any string in 
-\begin_inset Formula $L_{1}$
+\begin_inset Formula $L_{5}$
 \end_inset
 
  of length at least 
@@ -316,7 +367,7 @@ Assume
 \end_inset
 
  , 
-\begin_inset Formula $xy^{i}z\in L_{1}$
+\begin_inset Formula $xy^{i}z\in L_{5}$
 \end_inset
 
 
@@ -345,7 +396,11 @@ Let
 \begin_inset Formula $s=w(0\cup1\cup\varepsilon)w^{\mathcal{R}}$
 \end_inset
 
-somehow 
+, where 
+\begin_inset Formula $|w|=p+1$
+\end_inset
+
+ , somehow 
 \begin_inset Formula $s=xyz$
 \end_inset
 
@@ -357,7 +412,7 @@ case 1:
 \begin_inset Formula $y$
 \end_inset
 
-occurs in 
+ occurs in 
 \begin_inset Formula $w$
 \end_inset
 
@@ -365,11 +420,20 @@ occurs in
 \end_layout
 
 \begin_layout Standard
+In this case, the left side of palindrome would get pumped and fail to land
+ back in the language 
+\begin_inset Formula $L_{5}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 case 2: 
 \begin_inset Formula $y$
 \end_inset
 
-occurs in 
+ occurs in 
 \begin_inset Formula $w^{\mathcal{R}}$
 \end_inset
 
@@ -377,15 +441,178 @@ occurs in
 \end_layout
 
 \begin_layout Standard
+In this case 
+\begin_inset Formula $|xy|>p$
+\end_inset
+
+ which fails the pumping lemma.
+\end_layout
+
+\begin_layout Standard
 case 3: 
 \begin_inset Formula $y$
 \end_inset
 
- occurs inbetween with part
+ includes a middle character
+\end_layout
+
+\begin_layout Standard
+In this case 
+\begin_inset Formula $|xy|>p$
+\end_inset
+
+ which fails the pumping lemma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore L_{5}$
+\end_inset
+
+ must be nonregular
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{contains equal numbers of 0s and 1s}\}$
+\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{ contains equal numbers of 0s and 1s}\}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $L_{6}$
+\end_inset
+
+ is regular, then there is a number 
+\begin_inset Formula $p$
+\end_inset
+
+ (pumping length) where if 
+\begin_inset Formula $s$
+\end_inset
+
+ is any string in 
+\begin_inset Formula $L_{6}$
+\end_inset
+
+ of length at least 
+\begin_inset Formula $p$
+\end_inset
+
+, then 
+\begin_inset Formula $s$
+\end_inset
+
+ may be divided into three pieces, 
+\begin_inset Formula $s=xyz$
+\end_inset
+
+, satisfying the following conditions:
+\end_layout
+
+\begin_layout Standard
+1.
+ 
+\begin_inset Formula $\forall i\geq0$
+\end_inset
+
+ , 
+\begin_inset Formula $xy^{i}z\in L_{6}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2.
+ 
+\begin_inset Formula $|y|>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+3.
+ 
+\begin_inset Formula $|xy|\leq p$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $s=0^{p+1}1^{p+1}$
+\end_inset
+
+, somehow 
+\begin_inset Formula $s=xyz$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+case 1: 
+\begin_inset Formula $y$
+\end_inset
+
+ occurs in 
+\begin_inset Formula $0^{p+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case, the left side of 
+\begin_inset Formula $s$
+\end_inset
+
+ would get pumped and fail to land back in the language 
+\begin_inset Formula $L_{6}$
+\end_inset
+
+ since there would be more 0s than 1s.
+\end_layout
+
+\begin_layout Standard
+case 2: 
+\begin_inset Formula $y$
+\end_inset
+
+ contains characters ouside of 
+\begin_inset Formula $0^{p+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In this case 
+\begin_inset Formula $|xy|>p$
+\end_inset
+
+ which fails the pumping lemma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\therefore L_{6}$
+\end_inset
+
+ must be nonregular
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -500,7 +727,7 @@ CFG
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{is a palindrome}\}$
+\begin_inset Formula $L_{5}=\{w|w\in\{0,1\}^{*},w\text{ is a palindrome}\}$
 \end_inset
 
  
@@ -518,10 +745,10 @@ CFG
 \end_layout
 
 \begin_layout Subsection*
-\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{contains equal numbers of 0s and 1s}\}$
+\begin_inset Formula $L_{6}=\{w|w\in\{0,1\}^{*},w\text{ contains equal numbers of 0s and 1s}\}$
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -536,6 +763,9 @@ CFG
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
 Use the 
 \bar under
 CFG Developer
@@ -789,6 +1019,81 @@ state diagrams of PDAs
 non-regular languages
 \bar default
  above.
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Graphics
+	filename PDA State Diagrams.png
+	lyxscale 50
+	height 75pheight%
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Informal Description
+\end_layout
+
+\begin_layout Standard
+PDA
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ The PDA uses its stack to count the number of open parentheses minus the
+ number of close parentheses.
+ It enters an accepting state whenver this count is zero.
+ The PDA scans across the input.
+ If it sees an open parenthesis it pushes it onto the stack.
+ If it sees a +, - , *, or / then nothing is done with the stack.
+ If it sees a close parenthesis then it will try to pop a open parenthesis
+ of the stack.
+ If it cannot then the PDA will reject.
+ After completing the scan of the input and the stack has the starting symbol
+ on top then the PDA accepts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{5}$
+\end_inset
+
+ The PDA uses its stack to keep track of the order of 0s and 1s.
+ In an accpet instance, as we process the left side of the palindrom.
+ The 0s and 1s get pushed onto the stack.
+ If there is a middle character( ie.
+ the palindrom is of odd length) then 
+\begin_inset Formula $\varepsilon,\varepsilon\rightarrow\varepsilon$
+\end_inset
+
+ will skip this middle character and then start poping of the stack the
+ right side of the palindrome.
+ Only if the right side, is the reverse of the left, will all characters
+ be poped of the stack and reach our stoping character
+\begin_inset Formula $\$$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L_{6}$
+\end_inset
+
+ The PDA uses the stack to keep track of how many 0s or 1s in the input.
+ It pushes 0s and 1s onto the stack and will only accept if it is able to
+ pop an equal amount of 0s and 1s.
+ A 0 will only be poped when a 1 is read and vice versa.
+ Due to the nondeterministic nature of PDA there will exist one computation
+ where it successfuly reaches the accept state for string where there are
+ equal number of 0s and 1s.
 \end_layout
 
 \end_body
