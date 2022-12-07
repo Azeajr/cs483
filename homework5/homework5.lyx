@@ -1,0 +1,1462 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{enumitem}
+\setenumerate{label=A)}
+\setenumerate[2]{label=a)}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 5
+\end_layout
+
+\begin_layout Author
+Antonio Zea Jr
+\end_layout
+
+\begin_layout Section*
+Problems
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Graphics
+	filename problem1.png
+	width 50page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $f$
+\end_inset
+
+ one-to-one?
+\begin_inset Newline newline
+\end_inset
+
+No, 
+\begin_inset Formula $f$
+\end_inset
+
+ is not one-to-one because 
+\begin_inset Formula $f(2)=f(4)$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $f$
+\end_inset
+
+ onto?
+\begin_inset Newline newline
+\end_inset
+
+No, 
+\begin_inset Formula $\forall y\in Y\nexists\quad x\in X:f(x)=y$
+\end_inset
+
+.
+ For example, nothing is mapped on to 8 in 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $f$
+\end_inset
+
+ a correspondence?
+\begin_inset Newline newline
+\end_inset
+
+No, 
+\begin_inset Formula $f$
+\end_inset
+
+ is a correspondence iff.
+ it is both one-to-one and onto.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $g$
+\end_inset
+
+ one-to-one?
+\begin_inset Newline newline
+\end_inset
+
+Yes, 
+\begin_inset Formula $\forall x_{1},x_{2}\in X:g(x_{1})=g(x_{2})\implies x_{1}=x_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $g$
+\end_inset
+
+ onto?
+\begin_inset Newline newline
+\end_inset
+
+Yes, 
+\begin_inset Formula $\forall y\in Y\quad\exists x\in X:f(x)=y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $g$
+\end_inset
+
+ a correspondence?
+\begin_inset Newline newline
+\end_inset
+
+Yes, 
+\begin_inset Formula $g$
+\end_inset
+
+ is a correspondence iff.
+ it is both one-to-one and onto.
+\end_layout
+
+\begin_layout Subsection
+Prove that the set of all infinite sequences over {0,1} is uncountable.
+\end_layout
+
+\begin_layout Standard
+Suppose that a corrspondence 
+\begin_inset Formula $f$
+\end_inset
+
+ existed between 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ and the set of all infinite sequences over 
+\begin_inset Formula $\{0,1\}$
+\end_inset
+
+ referred to as 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $n$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(n)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+000...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+010...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+100...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+001...
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Lets now go about constructing 
+\begin_inset Formula $x$
+\end_inset
+
+, a sequence in 
+\begin_inset Formula $A$
+\end_inset
+
+ but not represented by the mapping described by 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Construct 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\neq f(1)$
+\end_inset
+
+ by choosing the first digit to be 1.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\neq f(2)$
+\end_inset
+
+ by choosing the second digit to be 0.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\neq f(3)$
+\end_inset
+
+ by choosing the third digit to be 1.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\neq f(4)$
+\end_inset
+
+ by choosing the fourth digit to be the opposite of 
+\begin_inset Formula $f(4)$
+\end_inset
+
+'s fourth digit and so on.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x=101...$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+By continuing this process, 
+\begin_inset Formula $x$
+\end_inset
+
+ will be a sequence that is not represented by 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ This is a contradiction therefore the set of all infinite sequences over
+ {0,1} is uncountable.
+\end_layout
+
+\begin_layout Subsection
+Use the result from the previous proof (item 2) to prove that the power
+ set of any infinite countable set is uncountable.
+\end_layout
+
+\begin_layout Standard
+Suppose that the power set of natural numbers, 
+\begin_inset Formula $2^{\mathbb{N}}$
+\end_inset
+
+ is countable.
+ Then 
+\begin_inset Formula $\exists f:\mathbb{N}\rightarrow2^{\mathbb{N}}$
+\end_inset
+
+ .
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(yes)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\emptyset$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(no)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the set of even numbers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(no)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+the set of odd numbers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(no)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+{1}
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\vdots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ddots$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Lets now go about constructing 
+\begin_inset Formula $x$
+\end_inset
+
+, a set in 
+\begin_inset Formula $2^{\mathbb{N}}$
+\end_inset
+
+ but not represented by the mapping described by 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Construct 
+\begin_inset Formula $x$
+\end_inset
+
+ by changing each element on the diagonal.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $3\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $4\in f(i)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+no
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\dotsb$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+By continuing this process, 
+\begin_inset Formula $x$
+\end_inset
+
+ will be a set that is not represented by 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ This is a contradiction therefore the power set of 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+ is uncountable.
+ Lastly, by the definition of countable there is a direct mapping from any
+ infinitely countable set to 
+\begin_inset Formula $\mathbb{N}$
+\end_inset
+
+.
+ Therefore the power set of any infinite countable set is uncountable.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $B=\{\langle M\rangle|M$
+\end_inset
+
+ is a TM and 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts the two's complement of binary number 
+\begin_inset Formula $N$
+\end_inset
+
+ whenever it accepts 
+\begin_inset Formula $N$
+\end_inset
+
+
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Prove that language 
+\begin_inset Formula $B$
+\end_inset
+
+ is undecidable
+\end_layout
+
+\begin_layout Standard
+We assume that 
+\begin_inset Formula $B$
+\end_inset
+
+ is decidable.
+ Suppose that 
+\begin_inset Formula $H$
+\end_inset
+
+ is a decider for 
+\begin_inset Formula $B$
+\end_inset
+
+.
+ ON input 
+\begin_inset Formula $\langle M,N\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $M$
+\end_inset
+
+ is a TM and 
+\begin_inset Formula $N$
+\end_inset
+
+ is a string, 
+\begin_inset Formula $H$
+\end_inset
+
+ halts and accepts if 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $N$
+\end_inset
+
+.
+ Furthermore, 
+\begin_inset Formula $H$
+\end_inset
+
+ halts and rejects if 
+\begin_inset Formula $M$
+\end_inset
+
+ fails to accept 
+\begin_inset Formula $N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $H(\langle M,N\rangle)=\begin{cases}
+\text{accept} & \text{if \ensuremath{M}accepts \ensuremath{N}}\\
+\text{reject} & \text{if \ensuremath{M}does not accept N}
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we construct a new Turing machine 
+\begin_inset Formula $D$
+\end_inset
+
+ with 
+\begin_inset Formula $H$
+\end_inset
+
+ as a subroutine.
+ This new TM calls 
+\begin_inset Formula $H$
+\end_inset
+
+ to determine what 
+\begin_inset Formula $M$
+\end_inset
+
+ does when the input to 
+\begin_inset Formula $M$
+\end_inset
+
+ is its own description 
+\begin_inset Formula $\langle M\rangle$
+\end_inset
+
+ .
+ Once 
+\begin_inset Formula $D$
+\end_inset
+
+ has determined this information, it does the opposite.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D=$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $\langle M\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $M$
+\end_inset
+
+ is a TM:
+\end_layout
+
+\begin_layout Standard
+1.
+ Run 
+\begin_inset Formula $H$
+\end_inset
+
+on input 
+\begin_inset Formula $\langle M,\langle M\rangle\rangle$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+2.
+ Output the opposite of what 
+\begin_inset Formula $H$
+\end_inset
+
+ outputs.
+ That is, if 
+\begin_inset Formula $H$
+\end_inset
+
+ accepts, 
+\shape italic
+reject
+\shape default
+; and if 
+\begin_inset Formula $H$
+\end_inset
+
+ rejects, 
+\shape italic
+accept
+\shape default
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+So we have the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D(\langle M\rangle)=\begin{cases}
+\text{accept} & \text{if \ensuremath{M} does not accept \ensuremath{\langle M\rangle}}\\
+\text{reject} & \text{if \ensuremath{M} accepts \ensuremath{\langle M\rangle}}
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+What happens when we run D with its own description 
+\begin_inset Formula $\langle D\rangle$
+\end_inset
+
+ as input? In that case, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $D(\langle D\rangle)=\begin{cases}
+\text{accept} & \text{if \ensuremath{M} does not accept \ensuremath{\langle M\rangle}}\\
+\text{reject} & \text{if \ensuremath{M} accepts \ensuremath{\langle M\rangle}}
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+No matter what 
+\begin_inset Formula $D$
+\end_inset
+
+ does, it is forced to do the opposite, which is a contradiction.
+ Therefore, TM 
+\begin_inset Formula $D$
+\end_inset
+
+and TM 
+\begin_inset Formula $H$
+\end_inset
+
+can not exits.
+ Language 
+\begin_inset Formula $B$
+\end_inset
+
+ is therefore undecidable.
+\end_layout
+
+\end_body
+\end_document
