@@ -1,0 +1,1694 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{enumitem}
+\setenumerate{label=A)}
+\setenumerate[2]{label=a)}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 6
+\end_layout
+
+\begin_layout Author
+Antonio Zea Jr
+\end_layout
+
+\begin_layout Section*
+Problems
+\end_layout
+
+\begin_layout Standard
+7.1 Answer each part TRUE or FALSE.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2n=\mathcal{O}(n)$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2n\leq c(n)$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=3$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2n\leq3(n)$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n^{2}=\mathcal{O}(n)$
+\end_inset
+
+ is FALSE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n^{2}\geq c(n)$
+\end_inset
+
+ , 
+\begin_inset Formula $\forall c\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n^{2}=\mathcal{O}(n\log^{2}n)$
+\end_inset
+
+ is FALSE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n^{2}\geq c(n\log^{2}n)$
+\end_inset
+
+ , 
+\begin_inset Formula $\forall c\in\mathbb{N}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n\log n=\mathcal{O}(n^{2})$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n\log n\leq c(n^{2})$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=2$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n\log n\leq1(n^{2})$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $3^{n}=2^{\mathcal{O}(n)}$
+\end_inset
+
+ is FALSE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $3^{n}\geq2^{c(n)}$
+\end_inset
+
+ , 
+\begin_inset Formula $\forall c\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2^{2^{n}}=\mathcal{O}(2^{2^{n}})$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2^{2^{n}}\leq c(2^{2^{n}})$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2^{2^{n}}\leq1(2^{2^{n}})$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.2 Answer each part TRUE or FALSE.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n=o(2n)$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n<c(2n)$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n<1(2n)$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2n=o(n^{2})$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2n<c(n^{2})$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=3$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2n<1(n^{2})$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq3$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $2^{n}=o(3^{n})$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2^{n}<c(3^{n})$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=1$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $2^{n}<1(3^{n})$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1=o(n)$
+\end_inset
+
+ is TRUE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $1<c(n)$
+\end_inset
+
+ , where 
+\begin_inset Formula $c=1$
+\end_inset
+
+ and 
+\begin_inset Formula $n_{0}=2$
+\end_inset
+
+ then
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $1<1(n)$
+\end_inset
+
+ , 
+\begin_inset Formula $n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $n=o(\log n)$
+\end_inset
+
+ is FALSE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $n\geq c\log n$
+\end_inset
+
+, 
+\begin_inset Formula $\forall c\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $1=o(\frac{1}{n})$
+\end_inset
+
+ is FALSE
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $1\geq c\frac{1}{n}$
+\end_inset
+
+, 
+\begin_inset Formula $\forall c\in\mathbb{N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.3 Which of the following pairs of numbers are relatively prime? Show the
+ calculations that led to your conclusions.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{aligned}10505= & 1274\cdot8+313\\
+1274= & 313\cdot4+22\\
+313= & 22\cdot14+5\\
+22= & 5\cdot4+2\\
+5= & 2\cdot2+\boldsymbol{1}\\
+2= & 1\cdot2+0
+\end{aligned}
+$
+\end_inset
+
+
+\begin_inset Formula $\therefore\gcd(1274,10505)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{aligned}8029= & 7289\cdot1+740\\
+7289= & 740\cdot9+629\\
+740= & 629\cdot1+111\\
+629= & 111\cdot5+74\\
+111= & 74\cdot1+\boldsymbol{37}\\
+74= & 37\cdot2+0
+\end{aligned}
+$
+\end_inset
+
+
+\begin_inset Formula $\therefore\gcd(7289,8029)=37$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.5 Is the following formula satisfiable?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $(x\lor y)\land(x\lor\overline{y})\land(\overline{x}\lor y)\land(\overline{x}\lor\overline{y})$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="7">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x\lor y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x\lor\overline{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\overline{x}\lor y)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(\overline{x}\lor\overline{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(x\lor y)\land(x\lor\overline{y})\land(\overline{x}\lor y)\land(\overline{x}\lor\overline{y})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\therefore(x\lor y)\land(x\lor\overline{y})\land(\overline{x}\lor y)\land(\overline{x}\lor\overline{y})$
+\end_inset
+
+ is not satisfiable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+7.6 Show that P is closed under union, concatenation, and complement.
+\begin_inset Newline newline
+\end_inset
+
+For any two 
+\begin_inset Formula $A,B\in\mathcal{P}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the deterministic single-tape Turing machines that decide them in polynomial
+ time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a deterministic single-tape Turing machines that decides the union of 
+\begin_inset Formula $A$
+\end_inset
+
+and 
+\begin_inset Formula $B$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in A\cup B$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ if it accepts then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+ If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ rejects then move onto step 2.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ if it accepts then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+ If 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ rejects then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any two 
+\begin_inset Formula $A,B\in\mathcal{P}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the deterministic single-tape Turing machines that decide them in polynomial
+ time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a deterministic single-tape Turing machines that decides the intersection
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+and 
+\begin_inset Formula $B$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in A\cap B$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Run
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If either rejects, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects.
+\end_layout
+
+\begin_layout Enumerate
+If both accept, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any two 
+\begin_inset Formula $A,B\in\mathcal{P}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the deterministic single-tape Turing machines that decide them in polynomial
+ time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a deterministic single-tape Turing machines that decides the concatenation
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+and 
+\begin_inset Formula $B$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in A\circ B$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Divide w into two substrings where 
+\begin_inset Formula $w=w_{1}\circ w_{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{1}\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+.
+ Run 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are deciders the TMs do not need to be run in lockstep unison.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ accept then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\end_layout
+
+\begin_layout Enumerate
+This process needs to be repeated for every possible subdivision of w.
+ All of those subdivisions need to be run against 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ in parallel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects if all subdivisions reject.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any 
+\begin_inset Formula $A\in\mathcal{P}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ be the deterministic single-tape Turing machine that decides 
+\begin_inset Formula $A$
+\end_inset
+
+ in polynomial time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a deterministic single-tape Turing machines that decides the complement
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in\overline{A}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+on 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ accepts, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ will reject.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ rejects, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ will accept.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.7 Show that NP is closed under union and concatenation.
+\begin_inset Newline newline
+\end_inset
+
+For any 
+\begin_inset Formula $A,B\in\mathcal{NP}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+be the nondeterministic single-tape Turing machines that decide them in
+ polynomial time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a nondeterministic single-tape Turing machines that decide the union of
+ 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in A\cup B$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ if it accepts then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+ If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ rejects then move onto step 2.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ if it accepts then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+ If 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ rejects then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For any two 
+\begin_inset Formula $A,B\in\mathcal{NP}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the nondeterministic single-tape Turing machines that decide them in
+ polynomial time.
+ We construct 
+\begin_inset Formula $M'$
+\end_inset
+
+ a nondeterministic single-tape Turing machines that decides the concatenation
+ of 
+\begin_inset Formula $A$
+\end_inset
+
+and 
+\begin_inset Formula $B$
+\end_inset
+
+ in polynomial time.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in A\circ B$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Enumerate
+Divide w into two substrings where 
+\begin_inset Formula $w=w_{1}\circ w_{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{1}\in A$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}\in B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+.
+ Run 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are deciders the TMs do not need to be run in lockstep unison.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ accept then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\end_layout
+
+\begin_layout Enumerate
+This process needs to be repeated for every possible subdivision of w.
+ All of those subdivisions need to be run against 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ in parallel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects if all subdivisions reject.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+7.8 Let CONNECTED = {⟨G⟩| G is a connected undirected graph}.
+ Analyze the algorithm given on page 185 to show that this language is in
+ P.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $M=$
+\end_inset
+
+ “On input 
+\begin_inset Formula $⟨G⟩$
+\end_inset
+
+, the encoding of a graph 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Select the first node of 
+\begin_inset Formula $G$
+\end_inset
+
+ and mark it.
+\end_layout
+
+\begin_layout Enumerate
+Repeat the following stage until no new nodes are marked:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For each node in 
+\begin_inset Formula $G$
+\end_inset
+
+, mark it if it is attached by an edge to a node that is already marked.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Scan all the nodes of 
+\begin_inset Formula $G$
+\end_inset
+
+ to determine whether they all are marked.
+ If they are, accept ; otherwise, reject .”
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $m$
+\end_inset
+
+ be the number of nodes in 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Stages 1 and 3 are executed only once.
+ Stage 2.a runs at most 
+\begin_inset Formula $m$
+\end_inset
+
+ times because each time except the last it marks an additional node in
+ 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Thus, the total numbers of stages used is at most 
+\begin_inset Formula $1+1+m$
+\end_inset
+
+ , giving a polynomial in the size of 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Stages 1 and 3 of 
+\begin_inset Formula $M$
+\end_inset
+
+ are implemented in polynomial time easily.
+ Stage 2.a involves looking at each node in G and testing whether it is attached
+ to node that already marked, which also is easily implemented in polynomial
+ time.
+ Therefore 
+\begin_inset Formula $M$
+\end_inset
+
+ is a polynomial time algorithim for CONNECTED
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+7.10 Show that 
+\begin_inset Formula $\text{ALL}_{\text{DFA}}$
+\end_inset
+
+ is in P.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $\text{ALL}_{\text{DFA}}=\{\langle A\rangle|A\text{ is DFA and}L(A)=\Sigma^{*}\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+A DFA accepts some string iff reaching an accept state from the start state
+ by traveling along the arrows of the DFA is possible.
+ To test this condition, we can design a TM T that uses a marking algorithm.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T=$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $\langle A\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a DFA:
+\end_layout
+
+\begin_layout Enumerate
+Mark the start state of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Repeat until no new states are marked:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Mark any state that has a transition coming into it from any state that
+ is alread marked.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If no accept state is marked, reject; otherwise accept.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Stage 1 executes once.
+ Stage 3 has to check each accept state to see if any have been marked,
+ this will take 
+\begin_inset Formula $|F|$
+\end_inset
+
+ steps (the number of accept states in the DFA).
+ Stage 2.a runs at most 
+\begin_inset Formula $|Q|$
+\end_inset
+
+ times (the number of states in the DFA), because each time xcept the last
+ it mark an additional state in 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Stage 2.a involves looking at each state n the DFA and testing whether its
+ has a transition coming into it from a state that is already marked, this
+ can be implemented in polynomial time.
+ Therefore 
+\begin_inset Formula $T$
+\end_inset
+
+is a polynomial time algorithim for 
+\begin_inset Formula $\text{ALL}_{\text{DFA}}$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
