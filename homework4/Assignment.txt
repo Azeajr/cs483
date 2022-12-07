@@ -1,0 +1,9 @@
+Give implementation-level description of a Turing machine M that decides the language A = {w1~w2| w1,w2 ∈ {0,1}*, w2 is bitwise complement of w1}. For example, M should accept “101~010” and reject “101~101”. Hint: see the Turing machine M1 in the book.
+Give a formal description of M including a state diagram for δ.
+Implement M  (show the code) for the  TMSimulator . Run the machine on the simulator and show the sequence of configurations that M enters when started on the string “10~01”.
+Show that if languages L1 and L2 are decidable, then the intersection of L1 and L2 is also decidable.
+Show that if languages L1 and L2 are decidable, then concatenation of L1 and L2 is also decidable.
+Show that if languages L1 and L2 are recognizable, then the intersection of L1 and L2 is also recognizable.
+Show that if languages L1 and L2 are recognizable, then the concatenation of L1 and L2 is also recognizable.
+Show that language B = {⟨A⟩| A is a DFA and L(A) = Σ* } is decidable.
+Show that language C = {<D, R> | D is a DFA, R is a regular expression and L(D) = L(R)}  is decidable.

@@ -1,0 +1,55 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,lmargin=1cm,rmargin=1cm}
+\usepackage{amstext}
+\usepackage{babel}
+\begin{document}
+\title{Homework 4}
+\author{Antonio Zea Jr}
+\maketitle
+
+\section*{Problems}
+
+\subsection{Given $\underline{\text{implementation-level description}}$ of a
+Turing machine M that decides the language $A=\{w_{1}\sim w_{2}|w_{1},w_{2}\in\{0,1\}^{*}\text{ , }w_{2}\text{ is bitwise complement of}w_{1}\}$.
+For example, M should accept \textquotedblleft $101\sim010$\textquotedblright{}
+and reject \textquotedblleft $101\sim101$\textquotedblright . Hint:
+see the Turing machine $M_{1}$ in the book}
+
+\subsubsection*{Scan the across the tape to corresponding positions on either side
+of the $\sim$ symbol to check whether these positions contain opossite
+symbols. If they do not, or if no $\sim$ is found, $\emph{reject}$.
+Cross off symbols as they are checked to keep track of which symbols
+correspond.}
+
+\subsubsection*{When all symbols to the left of the $\sim$ have been crossed off,
+check for any remaining symbols to the right of the $\sim$. If any
+symbols remain, $\emph{reject}$ ; otherwise, $\emph{accept}$.}
+
+\subsection{Give a formal description of $M$ including a state diagram for $\delta$.\protect \\
+$Q=\{q_{1},q_{2},q_{3},q_{4},q_{5},q_{6},q_{7},q_{8},q_{A},q_{R}\}$\protect \\
+$\Sigma=\{0,1,\sim\}$\protect \\
+$\Gamma=\{0,1,\sim,x,\_\}$\protect \\
+$q_{0}=q_{1}$\protect \\
+$q_{\text{Accept}}=q_{A}$\protect \\
+$q_{\text{Reject}}=q_{R}$\protect \\
+}
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+ &  &  &  & \tabularnewline
+\hline 
+\hline 
+ &  &  &  & \tabularnewline
+\hline 
+ &  &  &  & \tabularnewline
+\hline 
+ &  &  &  & \tabularnewline
+\hline 
+ &  &  &  & \tabularnewline
+\hline 
+\end{tabular}
+
+\end{document}
+

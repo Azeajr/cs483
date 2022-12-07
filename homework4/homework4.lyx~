@@ -1,0 +1,1703 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Homework 4
+\end_layout
+
+\begin_layout Author
+Antonio Zea Jr
+\end_layout
+
+\begin_layout Section*
+Problems
+\end_layout
+
+\begin_layout Subsection
+Given 
+\begin_inset Formula $\underline{\text{implementation-level description}}$
+\end_inset
+
+ of a Turing machine M that decides the language 
+\begin_inset Formula $A=\{w_{1}\sim w_{2}|w_{1},w_{2}\in\{0,1\}^{*}\text{ , }w_{2}\text{ is bitwise complement of}w_{1}\}$
+\end_inset
+
+.
+ For example, M should accept “
+\begin_inset Formula $101\sim010$
+\end_inset
+
+” and reject “
+\begin_inset Formula $101\sim101$
+\end_inset
+
+”.
+ Hint: see the Turing machine 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ in the book
+\end_layout
+
+\begin_layout Subsubsection*
+Scan the across the tape to corresponding positions on either side of the
+ 
+\begin_inset Formula $\sim$
+\end_inset
+
+ symbol to check whether these positions contain opossite symbols.
+ If they do not, or if no 
+\begin_inset Formula $\sim$
+\end_inset
+
+ is found, 
+\begin_inset Formula $\emph{reject}$
+\end_inset
+
+.
+ Cross off symbols as they are checked to keep track of which symbols correspond.
+\end_layout
+
+\begin_layout Subsubsection*
+When all symbols to the left of the 
+\begin_inset Formula $\sim$
+\end_inset
+
+ have been crossed off, check for any remaining symbols to the right of
+ the 
+\begin_inset Formula $\sim$
+\end_inset
+
+.
+ If any symbols remain, 
+\begin_inset Formula $\emph{reject}$
+\end_inset
+
+ ; otherwise, 
+\begin_inset Formula $\emph{accept}$
+\end_inset
+
+.
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Give a formal description of 
+\begin_inset Formula $M$
+\end_inset
+
+ including a state diagram for 
+\begin_inset Formula $\delta$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Q=\{q_{1},q_{2},q_{3},q_{4},q_{5},q_{6},q_{7},q_{8},q_{A},q_{R}\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Sigma=\{0,1,\sim\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\Gamma=\{0,1,\sim,x,\_\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $q_{0}=q_{1}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $q_{\text{Accept}}=q_{A}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $q_{\text{Reject}}=q_{R}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta=$
+\end_inset
+
+ 
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\sim$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\text{␣}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{2},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{3},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{8},\sim,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{2},0,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{2},1,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{4},\sim,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{3},0,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{3},1,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{5},\sim,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{6},x,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{4},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{5}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{6},x,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{5},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{6}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{6},x,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{6},x,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{7},\sim,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{7}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{7},0,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{7},1,L$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{1},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\phi$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{8},x,R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q_{A},\text{␣},R$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename MstateDiagram.png
+	lyxscale 50
+	height 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Implement 
+\begin_inset Formula $M$
+\end_inset
+
+ (show the code) for the TMSimulator.
+ Run the machine on the simulator and show the sequence of configurations
+ that 
+\begin_inset Formula $M$
+\end_inset
+
+ enters when started on the string “
+\begin_inset Formula $10\sim01$
+\end_inset
+
+”.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename MTMcode.png
+	height 5cm
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM1.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM2.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM3.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM4.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM5.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM6.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM7.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM8.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM9.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM10.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM11.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM12.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM13.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM14.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM15.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM16.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM17.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM18.png
+	width 20page%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename TM19.png
+	width 20page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Show that if languages L1 and L2 are decidable, then the intersection of
+ L1 and L2 is also decidable.
+\end_layout
+
+\begin_layout Standard
+For any two decidable languages 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the TMs that decide them.
+ We construct a TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ that decides the intersection of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in L_{1}\cap L_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are deciders the TMs do not need to be run in lockstep unison.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If either rejects, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects.
+\end_layout
+
+\begin_layout Enumerate
+If both accept, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\end_layout
+
+\begin_layout Subsection
+Show that if languages L1 and L2 are decidable, then concatenation of L1
+ and L2 is also decidable.
+\end_layout
+
+\begin_layout Standard
+For any two decidable languages 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the TMs that decide them.
+ We construct a TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ that decides the concatenation of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in L_{1}\circ L_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Divide w into two substrings where 
+\begin_inset Formula $w=w_{1}\circ w_{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{1}\in L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+.
+ Run 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ are deciders the TMs do not need to be run in lockstep unison.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ accept then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\end_layout
+
+\begin_layout Enumerate
+This process needs to be repeated for every possible subdivision of w.
+ All of those subdivisions need to be run against 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ in parallel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects if all subdivisions reject.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Show that if languages L1 and L2 are recognizable, then the intersection
+ of L1 and L2 is also recognizable.
+\end_layout
+
+\begin_layout Standard
+For any two Turing-recognizable languages 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ , let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the TMs that recognize them.
+ We construct a TM 
+\begin_inset Formula $M′$
+\end_inset
+
+ that recognizes the intersection of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ : 
+\end_layout
+
+\begin_layout Standard
+“On input 
+\begin_inset Formula $w\in L_{1}\cap L_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ alternately on 
+\begin_inset Formula $w$
+\end_inset
+
+ step by step.
+ If both accept, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+ If either halt and reject, then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects.”
+\end_layout
+
+\begin_layout Standard
+If both 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ accept 
+\begin_inset Formula $w$
+\end_inset
+
+, 
+\begin_inset Formula $M′$
+\end_inset
+
+ accepts 
+\begin_inset Formula $w$
+\end_inset
+
+ because the accepting TM arrives to its accepting state after a finite
+ number of steps.
+ Note that if either 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ or 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ reject and either of them does so by looping, then 
+\begin_inset Formula $M′$
+\end_inset
+
+ will loop.
+\end_layout
+
+\begin_layout Subsection
+Show that if languages L1 and L2 are recognizable, then the concatenation
+ of L1 and L2 is also recognizable.
+\end_layout
+
+\begin_layout Standard
+For any two Turing-recognizable languages 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+, let 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ be the TMs that recognize them.
+ We construct a TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ that recognizes the concatenation of 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}$
+\end_inset
+
+ :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $w\in L_{1}\circ L_{2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Divide w into two substrings where 
+\begin_inset Formula $w=w_{1}\circ w_{2}$
+\end_inset
+
+, where 
+\begin_inset Formula $w_{1}\in L_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ alternately on 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{2}$
+\end_inset
+
+ in a step by step fashion.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ accept then 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts.
+\end_layout
+
+\begin_layout Enumerate
+This process needs to be repeated for every possible subdivision of w.
+ All of those subdivisions need to be run against 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ in parallel.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects if all subdivisions reject.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Show that language 
+\begin_inset Formula $B=\{\langle A\rangle|A\text{ is a DFA and }L(A)=\Sigma^{*}\}$
+\end_inset
+
+ is decidable.
+\end_layout
+
+\begin_layout Standard
+A DFA accepts some string iff reaching an accept state from the start state
+ by traveling along the arrows of the DFA is possible.
+ To test this condition, we can design a TM T that uses a marking algorithm.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T=$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+On input 
+\begin_inset Formula $\langle A\rangle$
+\end_inset
+
+, where 
+\begin_inset Formula $A$
+\end_inset
+
+ is a DFA:
+\end_layout
+
+\begin_layout Enumerate
+Mark the start state of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Repeat until no new states are marked:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Mark any state that has a transition coming into it from any state that
+ is alread marked.
+\end_layout
+
+\begin_layout Enumerate
+If no accept state is marked, reject; otherwise accept.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Show that language 
+\begin_inset Formula $C=\{\langle D,R\rangle|D$
+\end_inset
+
+ is a DFA, 
+\begin_inset Formula $R$
+\end_inset
+
+ is a regular expression and 
+\begin_inset Formula $L(D)=L(R)\}$
+\end_inset
+
+ is decidable.
+\end_layout
+
+\begin_layout Standard
+By theorem 1.40, A language is regular if and only if some NFA recognizes
+ it.
+ Therefore, 
+\begin_inset Formula $\exists E,$
+\end_inset
+
+ an NFA that recognizes 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+By Theorem 1.39, Every NFA has an equivalent DFA.
+ Therefore, 
+\begin_inset Formula $\exists F,$
+\end_inset
+
+ an DFA that recognizes 
+\begin_inset Formula $R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L(D)=L(R)=L(F)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $L(D)=L(F)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+By Theorem 4.5, two DFAs that recognize the same language is decidable, therefore
+ C is decidable.
+\end_layout
+
+\end_body
+\end_document
